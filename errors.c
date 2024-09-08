@@ -22,7 +22,7 @@ void _eputs(char *str)
  * _eputchar - writes the character c to stderr
  * @c: the character
  *
- * Return: on success 1 on error -1 
+ * Return: on success 1 on error -1
 */
 int _eputchar(char c)
 {

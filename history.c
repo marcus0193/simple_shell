@@ -12,7 +12,7 @@ char *get_history_file(info_t *info)
 	char *buf, *dir;
 
 	fir = _getenv(info, "HOME=");
-	if(!dir)
+	if (!dir)
 		return (NULL);
 	buf = malloc(sizeof(char) * (_strlen(dir) + _strlen(HIST_FILE) + 2));
 	if (!buf)
@@ -34,6 +34,7 @@ int write_history(info_t *info)
 {
 	ssize_t fd;
 	char *filename = get_history_file(info);
+
 	list_t = *node = NULL;
 
 	if (!filename)

@@ -7,7 +7,7 @@
  * @p: address of current poistions in buf
  *
  *
- * return: 1 if chain delimeter, 0 else
+ * Return: 1 if chain delimeter, 0 else
  */
 int is_chain(info_t *info, char *buf, size_t *p)
 {
@@ -25,7 +25,7 @@ int is_chain(info_t *info, char *buf, size_t *p)
 		info->cmd_buf_type = CMD_CHAIN;
 	}
 	else
-		return(0);
+		return (0);
 	*p = j;
 	return (1);
 }
@@ -40,7 +40,7 @@ int is_chain(info_t *info, char *buf, size_t *p)
  *
  * Return: NOTHING
  */
-void check_chain(info_t *info, char *buf, size_t *p, size_t len)
+void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 {
 	size_t j = *p;
 
@@ -115,10 +115,10 @@ int replace_vars(info_t *info)
 			continue;
 		}
 		if (!_strcmp(info->argv[i], "$$"))
-                {
-                        replace_string(&(info->argv[i]),
-                                        _strdup(convert_number(getpid(), 10, 0)));
-                        continue;
+		{
+			replace_string(&(info->argv[i]),
+				_strdup(convert_number(getpid(), 10, 0)));
+			continue;
 		}
 		node = node_starts_with(info->env, &info->argv[i][1], '=');
 		if (node)
