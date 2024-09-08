@@ -63,7 +63,6 @@ int _mycd(info_t *info)
 		}
 		_puts(_getenv(info, "OLDPWD=")), _putchar('\n');
 		chdir_ret = /* TODO: WHAT SHOULD THIS BE? */
-		chdir_ret = /* TODO: WHAT SHOULD THIS BE? */
 			chdir((dir = _getenv(info, "OLDPWD")) ? dir : "/");
 	}
 	else
@@ -88,13 +87,13 @@ int _mycd(info_t *info)
  *
  * Return: Always 0
 */
-int _myhelp(info_t *info)
+int myhelp(info_t *info)
 {
 	char **arg_array;
 
 	arg_array = info->argv;
 	_puts("help call work, Function not yet implemented \n");
 	if (0)
-		_puts(*args_array); /*temp att_unused workaround */
+		_puts(*arg_array); /*temp att_unused workaround */
 	return (0);
 }

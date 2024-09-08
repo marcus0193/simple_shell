@@ -2,7 +2,7 @@
 #define _SHELL_H_
 
 #include <stdio.h>
-#include <STDlib.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
 #include <sys/types.h>
@@ -43,7 +43,7 @@ typedef struct liststr
 	int num;
 	char *str;
 	struct liststr *next;
-} list_t
+} list_t;
 
 /**
  * struct passinfo - contains pseudo-arguements to pass into a function,
@@ -200,7 +200,7 @@ int renumber_history(info_t *info);
 
 /*toem_lists.c */
 list_t *add_node(list_t **, const char *, int);
-list *add_node_end(list_t **, const char *, int);
+list_t *add_node_end(list_t **, const char *, int);
 size_t print_list_str(const list_t *);
 int delete_node_at_index(list_t **, unsigned int);
 void free_list(list_t **);
